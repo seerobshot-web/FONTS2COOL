@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "colorsandfonts": {
+      "command": "npx",
+      "args": ["-y", "@colorsandfonts/mcp"]
+    },
+    "color-scheme-generator": {
+      "command": "npx",
+      "args": ["-y", "github:deepakkumardewani/color-scheme-mcp"]
+    }
+  }
+}
