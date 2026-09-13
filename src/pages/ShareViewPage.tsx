@@ -205,7 +205,7 @@ export function ShareViewPage() {
             <Tag.Root colorPalette="purple" variant="subtle" size="md">
               <Tag.Label>{pairing.secondary_font.family}</Tag.Label>
             </Tag.Root>
-            <Tag.Root colorPalette={rating.color as any} variant="subtle" size="md">
+            <Tag.Root colorPalette={rating.color} variant="subtle" size="md">
               <Tag.Label>Contrast: {rating.label}</Tag.Label>
             </Tag.Root>
           </HStack>

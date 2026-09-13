@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react"
 import {
   Box,
   Container,
-  Grid,
   HStack,
   Heading,
   Input,
@@ -74,12 +73,6 @@ export function ExplorePage() {
     }
     fetchSavedPairings()
   }, [user])
-
-  const fontMap = useMemo(() => {
-    const map: Record<string, Font> = {}
-    fonts.forEach((f) => { map[f.id] = f })
-    return map
-  }, [fonts])
 
   const familyMap = useMemo(() => {
     const map: Record<string, Font> = {}

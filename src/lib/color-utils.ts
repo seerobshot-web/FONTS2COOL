@@ -36,7 +36,10 @@ export function contrastRatio(hex1: string, hex2: string): number {
   return (lighter + 0.05) / (darker + 0.05)
 }
 
-export function wcagRating(ratio: number): { label: string; color: string } {
+export function wcagRating(ratio: number): {
+  label: "AAA" | "AA" | "AA Large" | "Fail"
+  color: "green" | "blue" | "yellow" | "red"
+} {
   if (ratio >= 7) return { label: "AAA", color: "green" }
   if (ratio >= 4.5) return { label: "AA", color: "blue" }
   if (ratio >= 3) return { label: "AA Large", color: "yellow" }
