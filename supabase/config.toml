@@ -1,0 +1,3 @@
+[functions.font-pairing-lab]
+verify_jwt = false
+entrypoint = "./functions/font-pairing-lab/index.ts"
