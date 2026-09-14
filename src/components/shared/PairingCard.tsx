@@ -1,6 +1,6 @@
 import { Box, HStack, Text, VStack, Tag, IconButton, Tooltip } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
-import { LuArrowRight, LuHeart, LuShare2 } from "react-icons/lu"
+import { LuArrowRight, LuHeart } from "react-icons/lu"
 import type { Font } from "@/lib/types"
 import { loadGoogleFont, fontFamilyCss, categoryColor, categoryLabel } from "@/lib/font-utils"
 
@@ -40,8 +40,6 @@ export function PairingCard({
 }: PairingCardProps) {
   loadGoogleFont(primaryFont.family, primaryFont.weights)
   loadGoogleFont(secondaryFont.family, secondaryFont.weights)
-
-  const isDark = bgColor.toLowerCase() === "#1a1a1a" || bgColor.toLowerCase() === "#000000"
 
   return (
     <Box
