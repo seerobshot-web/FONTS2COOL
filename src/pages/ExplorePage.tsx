@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react"
 import {
   Box,
   Container,
-  Grid,
   HStack,
   Heading,
   Input,
@@ -26,6 +25,22 @@ import { toaster } from "@/components/ui/toaster"
 import { useNavigate } from "react-router-dom"
 
 const categories = ["All", "Serif", "Sans-Serif", "Display", "Handwriting", "Monospace"]
+
+function shuffleWithSeed<T>(items: T[], seed: number): T[] {
+  let state = seed >>> 0 || 1
+  const nextRandom = () => {
+    state ^= state << 13
+    state ^= state >>> 17
+    state ^= state << 5
+    return ((state >>> 0) / 0xffffffff)
+  }
+  const result = [...items]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(nextRandom() * (i + 1))
+    ;[result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
+}
 
 const categoryMap: Record<string, string> = {
   "Serif": "serif",
@@ -75,12 +90,6 @@ export function ExplorePage() {
     fetchSavedPairings()
   }, [user])
 
-  const fontMap = useMemo(() => {
-    const map: Record<string, Font> = {}
-    fonts.forEach((f) => { map[f.id] = f })
-    return map
-  }, [fonts])
-
   const familyMap = useMemo(() => {
     const map: Record<string, Font> = {}
     fonts.forEach((f) => { map[f.family] = f })
@@ -113,7 +122,7 @@ export function ExplorePage() {
 
   const shuffledCurated = useMemo(() => {
     if (shuffleKey === 0) return filteredCurated
-    return [...filteredCurated].sort(() => Math.random() - 0.5)
+    return shuffleWithSeed(filteredCurated, shuffleKey)
   }, [filteredCurated, shuffleKey])
 
   const handleSave = async (primaryFamily: string, secondaryFamily: string) => {
