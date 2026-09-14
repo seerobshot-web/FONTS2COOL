@@ -46,7 +46,7 @@ export function SignupPage() {
       return
     }
 
-    toaster.create({ title: "Account created! Welcome to Fontpair.", type: "success" })
+    toaster.create({ title: "Account created! Welcome to Font2Color.", type: "success" })
     navigate("/")
   }
 
@@ -54,8 +54,8 @@ export function SignupPage() {
     <Container maxW="md" px={{ base: 4, md: 6 }} py="16">
       <VStack gap="6" align="stretch">
         <Box textAlign="center">
-          <Heading size="xl" mb="2" fontFamily="'Playfair Display', serif">Create Account</Heading>
-          <Text color="fg.muted">Join Fontpair to save and share your favorite font pairings.</Text>
+          <Heading size="xl" mb="2" fontFamily="heading">Create Account</Heading>
+          <Text color="fg.muted">Join Font2Color to save and share your favorite font pairings.</Text>
         </Box>
 
         <Box as="form" onSubmit={handleSubmit}>
@@ -100,7 +100,7 @@ export function SignupPage() {
               </Box>
             )}
 
-            <Button type="submit" colorPalette="blue" size="lg" loading={loading}>
+            <Button type="submit" colorPalette="brand" size="lg" loading={loading}>
               Create Account
             </Button>
           </VStack>
@@ -108,7 +108,7 @@ export function SignupPage() {
 
         <HStack justify="center">
           <Text fontSize="sm" color="fg.muted">Already have an account?</Text>
-          <Text fontSize="sm" color="blue.500" as={Link} to="/login" _hover={{ color: "blue.600" }} fontWeight="medium">
+          <Text fontSize="sm" color="brand.500" as={Link} to="/login" _hover={{ color: "brand.600" }} fontWeight="medium">
             Sign In
           </Text>
         </HStack>

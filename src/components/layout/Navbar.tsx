@@ -39,8 +39,8 @@ export function Navbar() {
       <Container maxW="7xl" px={{ base: 4, md: 6 }}>
         <Flex h="16" align="center" justify="space-between" gap="4">
           <Link to="/">
-            <Heading size="md" color="fg" letterSpacing="tight" fontFamily="'Playfair Display', serif" fontWeight="700">
-              Fontpair
+            <Heading size="md" color="fg" letterSpacing="tight" fontFamily="heading" fontWeight="700">
+              Font2<Text as="span" color="brand.500">Color</Text>
             </Heading>
           </Link>
 
@@ -114,7 +114,7 @@ export function Navbar() {
             ) : user ? (
               <Menu.Root>
                 <Menu.Trigger asChild>
-                  <IconButton aria-label="Account" variant="ghost" size="sm" colorPalette="blue">
+                  <IconButton aria-label="Account" variant="ghost" size="sm" colorPalette="brand">
                     <LuUser />
                   </IconButton>
                 </Menu.Trigger>
@@ -149,8 +149,8 @@ export function Navbar() {
                   to="/signup"
                   fontSize="sm"
                   fontWeight="semibold"
-                  color="blue.500"
-                  _hover={{ color: "blue.600" }}
+                  color="brand.500"
+                  _hover={{ color: "brand.600" }}
                 >
                   Sign Up
                 </ChakraLink>
@@ -169,7 +169,7 @@ export function Footer() {
       <Container maxW="7xl" px={{ base: 4, md: 6 }} py="8">
         <Flex direction={{ base: "column", md: "row" }} justify="space-between" align={{ base: "flex-start", md: "center" }} gap="4">
           <Text fontSize="sm" color="fg.muted">
-            Fontpair &mdash; Discover and test free font pairings using Google Fonts.
+            Font2Color &mdash; Discover and test free font pairings using Google Fonts.
           </Text>
           <HStack gap="4" fontSize="sm" color="fg.muted">
             <ChakraLink as={Link} to="/" _hover={{ color: "fg" }}>Explore</ChakraLink>

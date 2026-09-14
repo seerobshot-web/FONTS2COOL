@@ -120,7 +120,7 @@ export function ShareViewPage() {
           description="This share link may be invalid or the pairing was removed."
           icon={<LuLink />}
         >
-          <Button as={Link} to="/" colorPalette="blue" mt="4">
+          <Button as={Link} to="/" colorPalette="brand" mt="4">
             Back to Explore
           </Button>
         </EmptyState>
@@ -149,7 +149,7 @@ export function ShareViewPage() {
               Copy Link
             </Button>
             {!alreadySaved ? (
-              <Button size="sm" colorPalette="blue" onClick={handleSave} leftIcon={<LuHeart />}>
+              <Button size="sm" colorPalette="brand" onClick={handleSave} leftIcon={<LuHeart />}>
                 Save to Collection
               </Button>
             ) : (
@@ -199,7 +199,7 @@ export function ShareViewPage() {
         {/* Metadata */}
         <HStack gap="4" flexWrap="wrap" justify="space-between">
           <HStack gap="3" flexWrap="wrap">
-            <Tag.Root colorPalette="blue" variant="subtle" size="md">
+            <Tag.Root colorPalette="brand" variant="subtle" size="md">
               <Tag.Label>{pairing.primary_font.family}</Tag.Label>
             </Tag.Root>
             <Tag.Root colorPalette="purple" variant="subtle" size="md">

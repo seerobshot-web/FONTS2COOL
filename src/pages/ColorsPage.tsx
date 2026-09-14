@@ -355,7 +355,7 @@ export function ColorsPage() {
                     size="sm"
                   />
                   <HStack gap="2" flexWrap="wrap">
-                    <Button size="sm" colorPalette="blue" onClick={handleSavePalette} leftIcon={<LuSave />}>
+                    <Button size="sm" colorPalette="brand" onClick={handleSavePalette} leftIcon={<LuSave />}>
                       Save Palette
                     </Button>
                     <Button size="sm" variant="outline" onClick={() => copyAsCSS(customColors)}>
@@ -393,7 +393,7 @@ export function ColorsPage() {
                         key={m.value}
                         size="xs"
                         variant={wheelMode === m.value ? "solid" : "outline"}
-                        colorPalette={wheelMode === m.value ? "blue" : undefined}
+                        colorPalette={wheelMode === m.value ? "brand" : undefined}
                         onClick={() => setWheelMode(m.value)}
                       >
                         {m.label}
@@ -460,7 +460,7 @@ export function ColorsPage() {
                         key={s.value}
                         size="xs"
                         variant={genStyle === s.value ? "solid" : "outline"}
-                        colorPalette={genStyle === s.value ? "blue" : undefined}
+                        colorPalette={genStyle === s.value ? "brand" : undefined}
                         onClick={() => setGenStyle(s.value)}
                       >
                         {s.label}
