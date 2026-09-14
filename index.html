@@ -8,6 +8,26 @@
     <meta property="og:image" content="https://bolt.new/static/og_default.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+    <!--
+      Decodes the redirect public/404.html performs on GitHub Pages for
+      unknown paths (client-side routes) back into a real history entry
+      before the app mounts. No-op on every other host.
+      Adapted from https://github.com/rafgraph/spa-github-pages (MIT).
+    -->
+    <script type="text/javascript">
+      ;(function (l) {
+        if (l.search && l.search[1] === "/") {
+          var decoded = l.search.slice(1).split("&").map(function (s) {
+            return s.replace(/~and~/g, "&")
+          })
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded.shift() + (decoded.length ? "?" + decoded.join("&") : "") + l.hash
+          )
+        }
+      })(window.location)
+    </script>
 </head>
   <body>
     <div id="root"></div>

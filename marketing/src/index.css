@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Same brand palette as the app (see the root project's tailwind.config
+     history / Chakra theme) — Teal primary, Charcoal secondary. */
+  --color-brand-50: #f3fcfc;
+  --color-brand-100: #e2f8f8;
+  --color-brand-200: #c1f1f0;
+  --color-brand-300: #93e6e5;
+  --color-brand-400: #61dbd9;
+  --color-brand-500: #155c5b;
+  --color-brand-600: #114a49;
+  --color-brand-700: #0d3737;
+  --color-brand-800: #092726;
+  --color-brand-900: #051818;
+
+  --color-ink-50: #f7f8f8;
+  --color-ink-100: #ecebee;
+  --color-ink-500: #313435;
+  --color-ink-700: #1d1f20;
+  --color-ink-900: #0d0e0e;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+}
+
+body {
+  @apply bg-white text-ink-900 antialiased;
+}
