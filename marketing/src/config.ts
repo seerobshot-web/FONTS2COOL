@@ -1,4 +1,4 @@
-// Where "Open the app" / "Try it free" buttons point. Update this once the
-// app has a final production domain (the app itself currently deploys to
-// GitHub Pages via .github/workflows/deploy.yml).
-export const APP_URL = "https://seerobshot-web.github.io/FONTS2COOL/"
+// Where "Open the app" / "Try it free" buttons point. The app also deploys
+// to GitHub Pages (.github/workflows/deploy.yml) — update this once there's
+// a final production domain shared between the app and this marketing site.
+export const APP_URL = "https://lightpink-fish-314309.hostingersite.com/"

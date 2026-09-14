@@ -47,7 +47,7 @@ export function LoginPage() {
     <Container maxW="md" px={{ base: 4, md: 6 }} py="16">
       <VStack gap="6" align="stretch">
         <Box textAlign="center">
-          <Heading size="xl" mb="2" fontFamily="'Playfair Display', serif">Welcome Back</Heading>
+          <Heading size="xl" mb="2" fontFamily="heading">Welcome Back</Heading>
           <Text color="fg.muted">Sign in to save and manage your font pairings.</Text>
         </Box>
 
@@ -82,7 +82,7 @@ export function LoginPage() {
               </Box>
             )}
 
-            <Button type="submit" colorPalette="blue" size="lg" loading={loading}>
+            <Button type="submit" colorPalette="brand" size="lg" loading={loading}>
               Sign In
             </Button>
           </VStack>
@@ -90,7 +90,7 @@ export function LoginPage() {
 
         <HStack justify="center">
           <Text fontSize="sm" color="fg.muted">Don't have an account?</Text>
-          <Text fontSize="sm" color="blue.500" as={Link} to="/signup" _hover={{ color: "blue.600" }} fontWeight="medium">
+          <Text fontSize="sm" color="brand.500" as={Link} to="/signup" _hover={{ color: "brand.600" }} fontWeight="medium">
             Sign Up
           </Text>
         </HStack>
