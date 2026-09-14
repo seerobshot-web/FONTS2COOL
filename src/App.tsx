@@ -15,7 +15,7 @@ import { SignupPage } from "@/pages/SignupPage"
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Box minH="100vh" display="flex" flexDirection="column" bg="bg">
           <Navbar />
           <Box flex="1">
