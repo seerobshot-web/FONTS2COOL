@@ -185,12 +185,12 @@ export function ExplorePage() {
       >
         <Container maxW="7xl" px={{ base: 4, md: 6 }}>
           <VStack gap="4" textAlign="center" align="center">
-            <Tag.Root colorPalette="blue" variant="subtle" size="md">
+            <Tag.Root colorPalette="brand" variant="subtle" size="md">
               <Tag.Label>1000+ curated combinations</Tag.Label>
             </Tag.Root>
             <Heading
               size="3xl"
-              fontFamily="'Playfair Display', serif"
+              fontFamily="heading"
               fontWeight="700"
               maxW="3xl"
               lineHeight="1.1"
@@ -201,7 +201,7 @@ export function ExplorePage() {
               Browse curated Google Fonts combinations. Preview with your own content, adjust colors and spacing, and save your favorites.
             </Text>
             <HStack gap="3" mt="2">
-              <Button colorPalette="blue" size="lg" onClick={() => navigate("/playground")}>
+              <Button colorPalette="brand" size="lg" onClick={() => navigate("/playground")}>
                 Open Playground
               </Button>
               <Button variant="outline" size="lg" onClick={() => navigate("/colors")}>
@@ -257,7 +257,7 @@ export function ExplorePage() {
             {categories.map((cat) => (
               <Tag.Root
                 key={cat}
-                colorPalette={activeCategory === cat ? "blue" : "gray"}
+                colorPalette={activeCategory === cat ? "brand" : "gray"}
                 variant={activeCategory === cat ? "solid" : "subtle"}
                 size="md"
                 cursor="pointer"

@@ -1,4 +1,4 @@
-# Fontpair.co
+# Font2Color
 
 Discover and test free font pairings using Google Fonts. Browse curated combinations, preview with your own content, adjust colors and spacing, and save your favorites.
 
@@ -50,7 +50,7 @@ A consistent branded interface needs more than a primary color. The Brand Theme 
 1. Clone the repository:
 ```bash
 git clone <repo-url>
-cd fontpair
+cd font2color
 ```
 
 2. Install dependencies:

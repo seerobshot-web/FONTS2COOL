@@ -1,6 +1,6 @@
-# Fontpair.co marketing site
+# Font2Color marketing site
 
-A standalone landing page for Fontpair.co — separate from the app in the
+A standalone landing page for Font2Color — separate from the app in the
 repo root (`src/`), on its own lightweight stack (Vite + React + Tailwind
 CSS v4) since a marketing page doesn't need Chakra UI or Supabase.
 

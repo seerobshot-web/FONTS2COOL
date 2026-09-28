@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-ink-100 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-ink-700 sm:flex-row">
-        <p>Fontpair.co — free font pairing &amp; color tools built on Google Fonts.</p>
+        <p>Font2Color — free font pairing &amp; color tools built on Google Fonts.</p>
         <div className="flex items-center gap-6">
           <a href="#features" className="hover:text-brand-600">
             Features

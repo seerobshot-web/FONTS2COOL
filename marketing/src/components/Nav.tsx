@@ -11,7 +11,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-ink-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#top" className="text-lg font-semibold tracking-tight text-ink-900">
-          Fontpair<span className="text-brand-500">.co</span>
+          Font2<span className="text-brand-500">Color</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

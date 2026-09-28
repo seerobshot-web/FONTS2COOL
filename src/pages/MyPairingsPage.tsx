@@ -83,7 +83,7 @@ export function MyPairingsPage() {
             description="Browse the Explore page to find font pairings you love, then save them here for later."
             icon={<LuHeart />}
           >
-            <Button as={Link} to="/" colorPalette="blue" mt="4">
+            <Button as={Link} to="/" colorPalette="brand" mt="4">
               Explore Pairings
             </Button>
           </EmptyState>
