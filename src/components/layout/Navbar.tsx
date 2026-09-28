@@ -40,7 +40,7 @@ export function Navbar() {
         <Flex h="16" align="center" justify="space-between" gap="4">
           <Link to="/">
             <Heading size="md" color="fg" letterSpacing="tight" fontFamily="heading" fontWeight="700">
-              Font2<Text as="span" color="brand.500">Color</Text>
+              Font2<Text as="span" color="brand.fg">Color</Text>
             </Heading>
           </Link>
 
@@ -149,8 +149,8 @@ export function Navbar() {
                   to="/signup"
                   fontSize="sm"
                   fontWeight="semibold"
-                  color="brand.500"
-                  _hover={{ color: "brand.600" }}
+                  color="brand.fg"
+                  _hover={{ color: "brand.solid" }}
                 >
                   Sign Up
                 </ChakraLink>

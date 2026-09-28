@@ -42,16 +42,21 @@ const config = defineConfig({
     semanticTokens: {
       colors: {
         // Registers "brand" as a usable colorPalette (colorPalette="brand"
-        // on Button, Tag, IconButton, etc.), the same way Chakra's built-in
-        // palettes like "blue" or "teal" work.
+        // on Button, Tag, IconButton, etc.), mirroring the exact shape (and
+        // light/dark pairing) Chakra's own built-in palettes like "blue"
+        // use — see @chakra-ui/react's theme/semantic-tokens/colors.js.
+        // Without the _dark half, anything reading brand.fg (ghost/outline
+        // button and link text) stays at the light-mode shade and loses
+        // contrast against a dark background.
         brand: {
-          solid: { value: "{colors.brand.600}" },
-          contrast: { value: "{colors.brand.50}" },
-          fg: { value: "{colors.brand.700}" },
-          muted: { value: "{colors.brand.100}" },
-          subtle: { value: "{colors.brand.50}" },
-          emphasized: { value: "{colors.brand.300}" },
-          focusRing: { value: "{colors.brand.500}" },
+          contrast: { value: { _light: "white", _dark: "white" } },
+          fg: { value: { _light: "{colors.brand.700}", _dark: "{colors.brand.300}" } },
+          subtle: { value: { _light: "{colors.brand.100}", _dark: "{colors.brand.900}" } },
+          muted: { value: { _light: "{colors.brand.200}", _dark: "{colors.brand.800}" } },
+          emphasized: { value: { _light: "{colors.brand.300}", _dark: "{colors.brand.700}" } },
+          solid: { value: { _light: "{colors.brand.600}", _dark: "{colors.brand.600}" } },
+          focusRing: { value: { _light: "{colors.brand.500}", _dark: "{colors.brand.500}" } },
+          border: { value: { _light: "{colors.brand.500}", _dark: "{colors.brand.400}" } },
         },
       },
     },

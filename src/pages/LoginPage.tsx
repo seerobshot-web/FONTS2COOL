@@ -90,7 +90,7 @@ export function LoginPage() {
 
         <HStack justify="center">
           <Text fontSize="sm" color="fg.muted">Don't have an account?</Text>
-          <Text fontSize="sm" color="brand.500" as={Link} to="/signup" _hover={{ color: "brand.600" }} fontWeight="medium">
+          <Text fontSize="sm" color="brand.fg" as={Link} to="/signup" _hover={{ color: "brand.solid" }} fontWeight="medium">
             Sign Up
           </Text>
         </HStack>

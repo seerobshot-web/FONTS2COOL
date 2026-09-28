@@ -108,7 +108,7 @@ export function SignupPage() {
 
         <HStack justify="center">
           <Text fontSize="sm" color="fg.muted">Already have an account?</Text>
-          <Text fontSize="sm" color="brand.500" as={Link} to="/login" _hover={{ color: "brand.600" }} fontWeight="medium">
+          <Text fontSize="sm" color="brand.fg" as={Link} to="/login" _hover={{ color: "brand.solid" }} fontWeight="medium">
             Sign In
           </Text>
         </HStack>
